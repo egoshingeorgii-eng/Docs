@@ -38,7 +38,7 @@ They suffer from **"competence gaps."** They understand food theory from watchin
 Plated isn't just a recipe saver; it’s a bridge that simplifies the culinary journey.
 
 * **AI Extraction:** We use **Gemini** to instantly parse unstructured TikToks, YouTube videos, and photos into clean, step-by-step guides. This solves the video gap—no more pausing with dirty hands.
-* **Magic Swap:** This solves economic anxiety. It uses culinary logic to rewrite recipes based on budget (e.g., "Make this cheaper") or diet. It acts as the **"Eitan" in their pocket**, telling them it's okay to swap shallots for onion powder.
+* **Magic Swap:** This solves economic anxiety. It uses culinary logic to rewrite recipes based on budget (e.g., "Make this cheaper") or diet. It acts as the **"Chef" in their pocket**, telling them it's okay to swap shallots for onion powder.
 * **SOS Layer:** A context-aware panic button on every recipe step. If a user thinks "My pan is smoking" or "This is too salty," the SOS button gives an immediate, specific fix.
 
 ---
