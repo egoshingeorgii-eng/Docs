@@ -1,6 +1,6 @@
 # Technical Documentation - Plated
 
-Plated is not just a recipe manager; it is a **local-first ingestion engine** for the culinary web. Built with Expo and React Native, it leverages **Gemini 2.0 Flash** to parse unstructured media (TikToks, Reels, long-form text) into structured, chemically viable JSON data.
+Plated is not just a recipe manager; it is a **local-first ingestion engine** for the culinary web. Built with Expo and React Native, it leverages **Gemini 2.0 Flash** to parse unstructured media (TikToks, YouTube, photo) into structured, chemically viable JSON data.
 
 ## 🚀 Tech Stack
 
@@ -12,8 +12,8 @@ Plated is not just a recipe manager; it is a **local-first ingestion engine** fo
 
 ### AI & Intelligence Layer
 
-* **Google Gemini 2.0 Flash:** We chose Flash for its massive context window and low latency. It powers the core extraction pipeline and the "Chef Brain" behind Magic Swap.
-* **Supadata:** Handles the raw retrieval of video transcripts and metadata from social platforms (TikTok/IG) before passing context to Gemini.
+* **Google Gemini 2.0 Flash:** I chose Flash for its massive context window and low latency. It powers the core extraction pipeline and the "Chef Brain" behind Magic Swap.
+* **Supadata:** Handles the raw retrieval of video transcripts and metadata from social platforms (TikTok/YouTube) before passing context to Gemini.
 
 ### State & Persistence (Offline First)
 
@@ -38,28 +38,28 @@ The core technical challenge was converting "influencer chatter" into actionable
 
 1. **Ingestion:** User triggers `expo-share-intent` directly from TikTok.
 2. **Extraction:** `Supadata` fetches the raw transcript and thumbnail.
-3. **Normalization (The AI Core):** We stream the transcript to **Gemini 2.0 Flash** with a strict **JSON Schema**. This forces the LLM to separate storytelling from instruction, normalize units (e.g., "a pinch" -> "1g"), and structure the data.
+3. **Normalization (The AI Core):** We stream the transcript to **Gemini 2.0 Flash** with a strict **JSON Schema**. This forces the LLM to separate storytelling from instruction, normalize units, and structure the data.
 4. **Hydration:** The resulting JSON is hydrated into the local Zustand store, making it instantly editable and searchable via **Fuse.js**.
 
 ### Magic Swap Logic
 
 Magic Swap isn't just text replacement; it's a semantic transformation.
 
-* **Input:** Current Recipe JSON + User Prompt (e.g., "Make this Aldi-friendly").
+* **Input:** Current Recipe JSON + User Prompt (e.g., "Make this vegan-friendly").
 * **Processing:** Gemini analyzes the chemical role of ingredients (binding vs. flavoring) to generate a chemically viable substitute, rewriting the step-by-step instructions to match.
 
 ---
 
 ## 💰 RevenueCat Implementation
 
-We use RevenueCat to power **Plated Pro**, gating the high-compute AI features.
+I use RevenueCat to power **Plated Premium**, gating the high-compute AI features.
 
 ### Implementation Strategy
 
 We chose a **Hybrid Gating** model to maximize conversion:
 
 1. **Hook (Free):** Users get 5 "Magic Scans" stored locally.
-2. **Gate (Pro):** Once the local counter hits 5, or if the user attempts a "Magic Swap," we check the `pro` entitlement.
+2. **Gate (Premium):** Once the local counter hits 5, or if the user attempts a "Magic Swap," we check the `pro` entitlement.
 
 ### Integration Details
 
