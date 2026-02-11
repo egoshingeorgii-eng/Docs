@@ -26,7 +26,7 @@ Current solutions are polarized. Utility apps are boring databases that feel lik
 Plated targets **Gen Z and Young Millennials (18–34)** who are "anxious but ambitious" in the kitchen.
 
 ### Economic Reality
-This generation is deeply price-sensitive. They view food waste as a financial loss. When they see a recipe calling for expensive niche ingredients, they don't see a delicious meal; they see a grocery bill they can't justify. They need **"pantry logic"** to stretch their groceries.
+This generation is deeply price-sensitive. They view food waste as a financial loss. When they see a recipe calling for expensive niche ingredients, they don't see a delicious meal; they see a grocery bill they can't justify. 
 
 ### How They Think
 They suffer from **"competence gaps."** They understand food theory from watching YouTube but lack tactile confidence. They require validation. They need a tool that feels like a safety net, not a textbook.
